@@ -24,12 +24,28 @@ body{
 
 /*HomePage Typing Animation*/
 
-@keyframes typing{
-    from {width:0}
-}
-
 @keyframes blink {
    50% { border-color: transparent; }
+}
+
+@keyframes top-In {
+  from { transform: translateY(-50px) }
+  to { transform: translateY(0px) }
+}
+
+@keyframes fade-in{
+
+    from {opacity: 0; }
+    to{ opacity:1;}
+
+}
+
+.top-In {
+    opacity:0;
+    animation:fade-in 5s ease,
+            top-In 3s ease;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
 }
 
 .Blinking-Border{
@@ -38,8 +54,29 @@ body{
     overflow: hidden;
     white-space: nowrap;
     animation:
-        /*typing 2s steps(24),*/
+        typing 2s steps(24),
         blink .3s step-end infinite alternate;
+
+}
+
+/*404 Typing Animation*/
+@keyframes typing{
+    from { width:0 }
+    to { width: 100% }
+}
+
+
+
+.typing{
+    border-right: 5px solid;
+    border-color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation:
+        typing 1.5s steps(15),
+        blink .3s step-end infinite;
+    animation-fill-mode: forwards;
 
 }
 

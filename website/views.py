@@ -1,5 +1,5 @@
-from flask import Blueprint, render_template, redirect, url_for
-
+from flask import Blueprint, render_template, redirect, url_for, abort
+from os import path
 
 views = Blueprint('views', __name__)
 
@@ -11,4 +11,7 @@ def home():
 
 @views.route('/<page>')
 def get_page(page):
-    return render_template(f'{page}.html')
+    if path.isfile(f"website/Templates/{page}.html"):
+        return render_template(f'{page}.html')
+
+    return abort(404)
