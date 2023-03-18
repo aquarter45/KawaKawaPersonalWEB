@@ -1,0 +1,38 @@
+{% extends "BaseTemplate.html" %}
+
+{% block title %}川-首頁{% endblock %}
+
+{% block page_content %}
+
+<div class="container-fluid d-flex align-items-center flex-row text-white" style="background-color: #35323d; height:500px">
+
+    <div class="ms-5 ps-5">
+        <p class="w-100 ps-3" style="font-size:100px;">川</p>
+        <p class="Blinking-Border SonoFonts">Illustrator. Programmer.</p>
+        <!--社群網站按鈕 首元素為常駐顯示 最後元素為Hover顯示-->
+        <!--GitHub-->
+        <button type="button" onclick="location.href='https://github.com/aquarter45'" class="btn btn-outline-light logo-Hover">
+            <img src="{{ url_for('static', filename='/image/github-mark-white.svg') }}" width="30px" title="GitHub@aquarter45">
+            <img src="{{ url_for('static', filename='/image/github-mark.svg') }}" width="30px" title="GitHub@aquarter45">
+        </button>
+        <!--Twitter-->
+        <button type="button" onclick="location.href='https://twitter.com/kawarakoi'" value="https://twitter.com/kawarakoi" class="btn btn-outline-light ms-3 logo-Hover">
+            <img src="{{ url_for('static', filename='/image/twitter-logo-white.svg') }}" width="30px" height="30px" title="Twitter@kawarakoi">
+            <img src="{{ url_for('static', filename='/image/twitter-logo-black.svg') }}" width="30px" height="30px" title="Twitter@kawarakoi">
+        </button>
+    </div>
+
+    <!--佔位方塊-->
+    <div class="w-25 ms-5 ps-5"></div>
+    <div class=" ms-5 ps-5"></div>
+    <!--介紹短文-->
+    <div class="d-flex flex-column ms-5 ps-5 text-end">
+        <p class="text-break pb-0">Hi! I'm KawaKawa, who is a senior high student.</p>
+        <p>I'm illustrator and also a programmer from <a href="https://www.pksh.ylc.edu.tw" class="text-decoration-none fs-2 pksh-glowing">Beigang Senior High.</a></p>
+        <p>My life opinion: East or west home is the best.</p>
+    </div>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap');
+
+
+*{
+
+    padding: none;
+    margin: none;
+    border: none;
+
+}
+
+html{
+    background: #332E33
+}
+
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.SonoFonts{
+    font-family: 'Sono', sans-serif;
+}
+
+/*HomePage Typing Animation*/
+
+@keyframes typing{
+    from {width:0}
+}
+
+@keyframes blink {
+   50% { border-color: transparent; }
+}
+
+.Blinking-Border{
+    border-right: 5px solid;
+    border-color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    animation:
+        /*typing 2s steps(24),*/
+        blink .3s step-end infinite alternate;
+
+}
+
+/*HomePage Glowing Text*/
+.pksh-glowing{
+
+    color: white;
+    text-shadow: 0 0 10px #6f36b5,
+                 0 0 20px #6f36b5,
+                 0 0 20px #6f36b5,
+                 0 0 20px #6f36b5,
+                 0 0 40px #6f36b5;
+}
+
+/*HomePage Github Button Hover Animation*/
+
+
+.logo-Hover img:last-child{
+    display:none;
+}
+
+.logo-Hover:hover img:first-child{
+    display:none;
+}
+
+.logo-Hover:hover img:last-child{
+    display:block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
